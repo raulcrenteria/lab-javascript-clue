@@ -100,7 +100,7 @@ console.log(randomNumber);
 return array[randomNumber];
 
 };
-function pickMistery(){
+function pickMistery() {
     var misteryEnvelope = [];
     var  character = randomSelector(charactersArray);
     var weapon = randomSelector(weaponsArray);
@@ -111,9 +111,15 @@ function pickMistery(){
 
 pickMistery();
 
-randomSelector(roomsArray);
+function revealMistery(array) {
+ return array[0].first_name + ' ' + array[0].last_name + ' killed Mr.Boddy using the ' + array[1].name + ' in the ' + array[2].name + '!!!!';
+}
 
 
+
+revealMistery(pickMistery());
+
+console.log(revealMistery(pickMistery()));
 
 
 
